@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="smhvz kişisel portföy sitesi: yazılım geliştirme, projeler ve iletişim."
+    />
+    <meta property="og:title" content="smhvz | Portföy" />
+    <meta
+      property="og:description"
+      content="Yazılım geliştirme, arayüzler ve ürün odaklı projeler."
+    />
+    <meta property="og:image" content="assets/portfolio-visual.png" />
+    <title>smhvz | Portföy</title>
+    <link rel="preload" href="assets/portfolio-visual.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Ana sayfa">smhvz</a>
+      <nav class="nav" aria-label="Ana menü">
+        <a href="#work">Projeler</a>
+        <a href="#skills">Yetenekler</a>
+        <a href="#contact">İletişim</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Temayı değiştir">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Yazılım Geliştirici</p>
+          <h1 id="hero-title">Kullanışlı, hızlı ve sade web deneyimleri.</h1>
+          <p class="hero-text">
+            Merhaba, ben Semih. Web uygulamaları, arayüz geliştirme ve ürün
+            odaklı yazılım çözümleri üzerine çalışıyorum.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#work">Projeleri gör</a>
+            <a class="button secondary" href="mailto:hello@example.com">İletişime geç</a>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img
+            src="assets/portfolio-visual.png"
+            alt="Modern yazılım geliştirme çalışma alanı görseli"
+          />
+        </figure>
+      </section>
+
+      <section class="section intro" aria-label="Kısa özet">
+        <div>
+          <span class="metric">01</span>
+          <p>Fikri çalışan, ölçülebilir ve bakımı kolay arayüzlere dönüştürme.</p>
+        </div>
+        <div>
+          <span class="metric">02</span>
+          <p>Temiz kod, net kullanıcı akışı ve hızlı yayınlanabilir statik siteler.</p>
+        </div>
+        <div>
+          <span class="metric">03</span>
+          <p>GitHub Pages üzerinde zahmetsizce barındırılabilen portföy yapısı.</p>
+        </div>
+      </section>
+
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Seçili İşler</p>
+          <h2 id="work-title">Projeler</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-topline">
+              <span>Web App</span>
+              <a href="https://github.com/semihvz" aria-label="GitHub profilini aç">GitHub</a>
+            </div>
+            <h3>Ürün Paneli</h3>
+            <p>
+              Kullanıcıların verileri hızlı okuyabildiği, responsive ve sade bir
+              yönetim arayüzü.
+            </p>
+          </article>
+          <article class="project-card">
+            <div class="project-topline">
+              <span>Frontend</span>
+              <a href="https://github.com/semihvz" aria-label="GitHub profilini aç">GitHub</a>
+            </div>
+            <h3>Landing Page</h3>
+            <p>
+              Performans ve erişilebilirlik odaklı, mobilde güçlü çalışan statik
+              tanıtım sayfası.
+            </p>
+          </article>
+          <article class="project-card">
+            <div class="project-topline">
+              <span>Automation</span>
+              <a href="https://github.com/semihvz" aria-label="GitHub profilini aç">GitHub</a>
+            </div>
+            <h3>İş Akışı Aracı</h3>
+            <p>
+              Tekrarlanan görevleri azaltan, ekip içi operasyonları hızlandıran
+              küçük otomasyonlar.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">Araç Seti</p>
+          <h2 id="skills-title">Yetenekler</h2>
+        </div>
+        <div class="skills">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Responsive UI</span>
+          <span>Git</span>
+          <span>GitHub Pages</span>
+          <span>API Entegrasyonu</span>
+          <span>Performans</span>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">İletişim</p>
+          <h2 id="contact-title">Bir proje veya fikir konuşalım.</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:hello@example.com">hello@example.com</a>
+          <a class="button secondary" href="https://github.com/semihvz">github.com/semihvz</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> smhvz</span>
+      <a href="#top">Yukarı dön</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
