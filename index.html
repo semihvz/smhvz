@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="smhvz kişisel portföy sitesi: yazılım geliştirme, projeler ve iletişim."
+      content="smhvz blog: projeler, öğrendiklerim, yazılım notları ve yayınladığım makaleler."
     />
-    <meta property="og:title" content="smhvz | Portföy" />
+    <meta property="og:title" content="smhvz | Blog" />
     <meta
       property="og:description"
-      content="Yazılım geliştirme, arayüzler ve ürün odaklı projeler."
+      content="Yaptığım işler, projeler ve yazılım üzerine yayınladığım makaleler."
     />
     <meta property="og:image" content="assets/portfolio-visual.png" />
-    <title>smhvz | Portföy</title>
+    <title>smhvz | Blog</title>
     <link rel="preload" href="assets/portfolio-visual.png" as="image" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Ana sayfa">smhvz</a>
+      <a class="brand" href="#top" aria-label="Ana sayfa">smhvz.blog</a>
       <nav class="nav" aria-label="Ana menü">
-        <a href="#work">Projeler</a>
-        <a href="#skills">Yetenekler</a>
+        <a href="#articles">Makaleler</a>
+        <a href="#series">Seriler</a>
+        <a href="#publish">Yayınla</a>
         <a href="#contact">İletişim</a>
       </nav>
       <button class="theme-toggle" type="button" aria-label="Temayı değiştir">
@@ -31,105 +32,160 @@
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
+      <section class="hero blog-hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Yazılım Geliştirici</p>
-          <h1 id="hero-title">Kullanışlı, hızlı ve sade web deneyimleri.</h1>
+          <p class="eyebrow">Kişisel Blog</p>
+          <h1 id="hero-title">Yaptığım her şey için notlar, makaleler ve yayınlar.</h1>
           <p class="hero-text">
-            Merhaba, ben Semih. Web uygulamaları, arayüz geliştirme ve ürün
-            odaklı yazılım çözümleri üzerine çalışıyorum.
+            Projelerimi, öğrendiğim teknikleri, kararlarımı ve denemelerimi tek
+            yerde topladığım yayın alanı.
           </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#work">Projeleri gör</a>
-            <a class="button secondary" href="mailto:hello@example.com">İletişime geç</a>
-          </div>
+          <form class="search-panel" role="search" aria-label="Makalelerde ara">
+            <label for="search">Makalelerde ara</label>
+            <div>
+              <input
+                id="search"
+                name="search"
+                type="search"
+                placeholder="Örn. GitHub Pages, JavaScript, proje notu"
+                autocomplete="off"
+              />
+              <button type="reset">Temizle</button>
+            </div>
+          </form>
         </div>
-        <figure class="hero-media">
-          <img
-            src="assets/portfolio-visual.png"
-            alt="Modern yazılım geliştirme çalışma alanı görseli"
-          />
-        </figure>
+        <aside class="hero-note" aria-label="Yayın özeti">
+          <span class="note-label">Son yayın</span>
+          <h2>Blogu GitHub Pages ile yayına almak</h2>
+          <p>
+            Bu sitenin nasıl düzenlenip yeni makalelerle büyütülebileceğini
+            anlatan başlangıç yazısı.
+          </p>
+          <a class="text-link" href="posts/github-pages-blog.html">Yazıyı oku</a>
+        </aside>
       </section>
 
-      <section class="section intro" aria-label="Kısa özet">
-        <div>
-          <span class="metric">01</span>
-          <p>Fikri çalışan, ölçülebilir ve bakımı kolay arayüzlere dönüştürme.</p>
-        </div>
-        <div>
-          <span class="metric">02</span>
-          <p>Temiz kod, net kullanıcı akışı ve hızlı yayınlanabilir statik siteler.</p>
-        </div>
+      <section class="section stats" aria-label="Blog özeti">
         <div>
           <span class="metric">03</span>
-          <p>GitHub Pages üzerinde zahmetsizce barındırılabilen portföy yapısı.</p>
+          <p>Başlangıç makalesi</p>
+        </div>
+        <div>
+          <span class="metric">04</span>
+          <p>Kategori</p>
+        </div>
+        <div>
+          <span class="metric">01</span>
+          <p>Yayın akışı</p>
         </div>
       </section>
 
-      <section class="section" id="work" aria-labelledby="work-title">
+      <section class="section articles-section" id="articles" aria-labelledby="articles-title">
         <div class="section-heading">
-          <p class="eyebrow">Seçili İşler</p>
-          <h2 id="work-title">Projeler</h2>
+          <div>
+            <p class="eyebrow">Yayın Akışı</p>
+            <h2 id="articles-title">Makaleler</h2>
+          </div>
+          <div class="filters" aria-label="Makale filtreleri">
+            <button class="filter active" type="button" data-filter="all">Tümü</button>
+            <button class="filter" type="button" data-filter="Proje">Proje</button>
+            <button class="filter" type="button" data-filter="Yazılım">Yazılım</button>
+            <button class="filter" type="button" data-filter="Notlar">Notlar</button>
+          </div>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-topline">
-              <span>Web App</span>
-              <a href="https://github.com/semihvz" aria-label="GitHub profilini aç">GitHub</a>
+
+        <div class="article-grid" id="article-grid">
+          <article class="article-card featured" data-category="Proje">
+            <div class="article-meta">
+              <span>Proje</span>
+              <time datetime="2026-07-12">12 Temmuz 2026</time>
+              <span>4 dk</span>
             </div>
-            <h3>Ürün Paneli</h3>
+            <h3>Blogu GitHub Pages ile yayına almak</h3>
             <p>
-              Kullanıcıların verileri hızlı okuyabildiği, responsive ve sade bir
-              yönetim arayüzü.
+              Statik bir blog yapısını nasıl düzenleyebileceğini, yeni yazıları
+              nereye ekleyeceğini ve yayına alma akışını anlatan başlangıç notu.
             </p>
+            <a class="text-link" href="posts/github-pages-blog.html">Makaleyi oku</a>
           </article>
-          <article class="project-card">
-            <div class="project-topline">
-              <span>Frontend</span>
-              <a href="https://github.com/semihvz" aria-label="GitHub profilini aç">GitHub</a>
+
+          <article class="article-card" data-category="Yazılım">
+            <div class="article-meta">
+              <span>Yazılım</span>
+              <time datetime="2026-07-12">12 Temmuz 2026</time>
+              <span>3 dk</span>
             </div>
-            <h3>Landing Page</h3>
+            <h3>İlk proje notu nasıl tutulur?</h3>
             <p>
-              Performans ve erişilebilirlik odaklı, mobilde güçlü çalışan statik
-              tanıtım sayfası.
+              Bir projeye başlarken amaç, karar, yapılacaklar ve sonuçları kısa
+              ama düzenli biçimde yazmak için pratik bir şablon.
             </p>
+            <a class="text-link" href="posts/proje-notu-sablonu.html">Makaleyi oku</a>
           </article>
-          <article class="project-card">
-            <div class="project-topline">
-              <span>Automation</span>
-              <a href="https://github.com/semihvz" aria-label="GitHub profilini aç">GitHub</a>
+
+          <article class="article-card" data-category="Notlar">
+            <div class="article-meta">
+              <span>Notlar</span>
+              <time datetime="2026-07-12">12 Temmuz 2026</time>
+              <span>2 dk</span>
             </div>
-            <h3>İş Akışı Aracı</h3>
+            <h3>Yayın takvimi oluşturmak</h3>
             <p>
-              Tekrarlanan görevleri azaltan, ekip içi operasyonları hızlandıran
-              küçük otomasyonlar.
+              Öğrendiklerini unutmamak ve düzenli paylaşmak için haftalık yazı
+              ritmi belirleme üzerine kısa bir plan.
             </p>
+            <a class="text-link" href="posts/yayin-takvimi.html">Makaleyi oku</a>
           </article>
+        </div>
+        <p class="empty-state" hidden>Bu aramaya uygun makale bulunamadı.</p>
+      </section>
+
+      <section class="section series-section" id="series" aria-labelledby="series-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Koleksiyonlar</p>
+            <h2 id="series-title">Yazı Serileri</h2>
+          </div>
+        </div>
+        <div class="series-list">
+          <a href="#articles">
+            <span>01</span>
+            <strong>Proje Günlüğü</strong>
+            <em>Yaptığım işlerin kararları, çıktıları ve öğrendikleri.</em>
+          </a>
+          <a href="#articles">
+            <span>02</span>
+            <strong>Teknik Notlar</strong>
+            <em>Kısa çözümler, kod parçaları ve pratik hatırlatmalar.</em>
+          </a>
+          <a href="#articles">
+            <span>03</span>
+            <strong>Yayın Günlüğü</strong>
+            <em>Blogu büyütme, içerik planlama ve yayınlama adımları.</em>
+          </a>
         </div>
       </section>
 
-      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
-        <div class="section-heading">
-          <p class="eyebrow">Araç Seti</p>
-          <h2 id="skills-title">Yetenekler</h2>
+      <section class="section publish" id="publish" aria-labelledby="publish-title">
+        <div>
+          <p class="eyebrow">Yeni Makale</p>
+          <h2 id="publish-title">Yeni yazı ekleme akışı hazır.</h2>
+          <p>
+            Her yeni makale için `posts/` klasöründe bir HTML dosyası oluştur,
+            ana sayfadaki makale kartına link ekle, sonra commit ve push yap.
+          </p>
         </div>
-        <div class="skills">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Responsive UI</span>
-          <span>Git</span>
-          <span>GitHub Pages</span>
-          <span>API Entegrasyonu</span>
-          <span>Performans</span>
-        </div>
+        <ol class="publish-steps">
+          <li>Bir yazı dosyasını kopyala ve başlık, tarih, kategori alanlarını değiştir.</li>
+          <li>`index.html` içindeki makale listesine yeni kartı ekle.</li>
+          <li>Değişiklikleri commit edip GitHub'a gönder; Pages otomatik yayınlar.</li>
+        </ol>
       </section>
 
       <section class="section contact" id="contact" aria-labelledby="contact-title">
         <div>
           <p class="eyebrow">İletişim</p>
-          <h2 id="contact-title">Bir proje veya fikir konuşalım.</h2>
+          <h2 id="contact-title">Bir fikir, proje veya yazı üzerine konuşalım.</h2>
         </div>
         <div class="contact-actions">
           <a class="button primary" href="mailto:hello@example.com">hello@example.com</a>
@@ -139,7 +195,8 @@
     </main>
 
     <footer class="footer">
-      <span>© <span id="year"></span> smhvz</span>
+      <span>© <span id="year"></span> smhvz.blog</span>
+      <a href="feed.xml">RSS</a>
       <a href="#top">Yukarı dön</a>
     </footer>
 

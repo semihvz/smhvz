@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="GitHub Pages üzerinde statik blogu düzenleme ve yayınlama notları."
+    />
+    <title>Blogu GitHub Pages ile yayına almak | smhvz</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html">smhvz.blog</a>
+      <nav class="nav" aria-label="Ana menü">
+        <a href="../index.html#articles">Makaleler</a>
+        <a href="../index.html#series">Seriler</a>
+        <a href="../index.html#publish">Yayınla</a>
+        <a href="../index.html#contact">İletişim</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Temayı değiştir">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </header>
+
+    <main class="post-main">
+      <article class="post">
+        <header class="post-header">
+          <p class="eyebrow">Proje</p>
+          <h1>Blogu GitHub Pages ile yayına almak</h1>
+          <div class="article-meta">
+            <time datetime="2026-07-12">12 Temmuz 2026</time>
+            <span>4 dk okuma</span>
+          </div>
+        </header>
+        <div class="post-content">
+          <p>
+            Bu blog, build aracı gerektirmeyen statik dosyalardan oluşur. Bu
+            yüzden GitHub Pages için hızlı ve dayanıklı bir yapı sunar.
+          </p>
+          <h2>Yayın mantığı</h2>
+          <p>
+            Ana sayfa yazı listesini gösterir. Her makale ise `posts/`
+            klasöründe ayrı bir HTML dosyasıdır. Yeni yazı eklemek için mevcut
+            yazılardan birini kopyalayıp içeriği değiştirmen yeterlidir.
+          </p>
+          <h2>Yayınlama adımları</h2>
+          <ol>
+            <li>Yeni yazı dosyasını `posts/` klasörüne ekle.</li>
+            <li>Ana sayfadaki makale listesine kartını koy.</li>
+            <li>RSS için `feed.xml` dosyasına yeni kayıt ekle.</li>
+            <li>Commit ve push sonrası GitHub Pages siteyi yayınlar.</li>
+          </ol>
+          <h2>Neden statik?</h2>
+          <p>
+            İçerik az kodla yönetilir, sayfalar hızlı açılır ve ücretsiz GitHub
+            Pages barındırmasıyla kolayca yayında kalır.
+          </p>
+        </div>
+      </article>
+
+      <aside class="post-sidebar">
+        <strong>Makale bilgisi</strong>
+        <p>Kategori: Proje</p>
+        <p>Durum: Yayında</p>
+        <a href="../index.html#articles">Tüm makaleler</a>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> smhvz.blog</span>
+      <a href="../feed.xml">RSS</a>
+      <a href="../index.html">Ana sayfa</a>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

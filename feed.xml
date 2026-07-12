@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>smhvz blog</title>
+    <link>https://semihvz.github.io/smhvz/</link>
+    <description>Projeler, yazılım notları ve yayınlanan makaleler.</description>
+    <language>tr</language>
+    <item>
+      <title>Blogu GitHub Pages ile yayına almak</title>
+      <link>https://semihvz.github.io/smhvz/posts/github-pages-blog.html</link>
+      <guid>https://semihvz.github.io/smhvz/posts/github-pages-blog.html</guid>
+      <pubDate>Sun, 12 Jul 2026 12:00:00 +0300</pubDate>
+      <description>Statik blog yapısını düzenleme ve GitHub Pages ile yayınlama notları.</description>
+    </item>
+    <item>
+      <title>İlk proje notu nasıl tutulur?</title>
+      <link>https://semihvz.github.io/smhvz/posts/proje-notu-sablonu.html</link>
+      <guid>https://semihvz.github.io/smhvz/posts/proje-notu-sablonu.html</guid>
+      <pubDate>Sun, 12 Jul 2026 12:00:00 +0300</pubDate>
+      <description>Projeler için kısa ve düzenli not tutma şablonu.</description>
+    </item>
+    <item>
+      <title>Yayın takvimi oluşturmak</title>
+      <link>https://semihvz.github.io/smhvz/posts/yayin-takvimi.html</link>
+      <guid>https://semihvz.github.io/smhvz/posts/yayin-takvimi.html</guid>
+      <pubDate>Sun, 12 Jul 2026 12:00:00 +0300</pubDate>
+      <description>Düzenli blog yayını için basit yayın takvimi.</description>
+    </item>
+  </channel>
+</rss>
